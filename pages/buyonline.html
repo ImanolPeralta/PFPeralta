@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Logotipo/CarsWorldWideLogotype.ico" type="image/x-icon">
+    <title>Buy Online</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/Logotipo/CarsWorldWideLogotype.ico" alt="Cars World Wide Logo">
+                <h1>Cars World Wide</h1>
+            </div>
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Models</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Low Range</a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="../pages/cars_models/chevrolet_spark.html">Chevrolet Spark</a></li>
+                                    <li><a href="../pages/cars_models/kia_rio.html">Kia Rio</a></li>
+                                    <li><a href="../pages/cars_models/hyundai_accemt.html">Hyundai Accent</a></li>
+                                    <li><a href="../pages/cars_models/nissan_versa.html">Nissan Versa</a></li>
+                                    <li><a href="../pages/cars_models/toyota_yaris.html">Toyota Yaris</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Mid Range</a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="../pages/cars_models/honda_civic.html">Honda Civic</a></li>
+                                    <li><a href="../pages/cars_models/toyota_corolla.html">Toyota Corolla</a></li>
+                                    <li><a href="../pages/cars_models/mazda3.html">Mazda 3</a></li>
+                                    <li><a href="../pages/cars_models/hyundai_elantra.html">Hyundai Elantra</a></li>
+                                    <li><a href="../pages/cars_models/volskwagen_jetta.html">Volkswagen Jetta</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">High End</a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="../pages/cars_models/mercedes_benz_clase_s.html">Mercedes Benz Clase S</a></li>
+                                    <li><a href="../pages/cars_models/bmw_serie_7.html">BMW Serie 7</a></li>
+                                    <li><a href="../pages/cars_models/audi_a8.html">Audi A8</a></li>
+                                    <li><a href="../pages/cars_models/porsche_panamera.html">Porsche Panamera</a></li>
+                                    <li><a href="../pages/cars_models/tesla_model_s.html">Tesla Model S</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sport Range</a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="../pages/cars_models/porsche911.html">Porsche 911</a></li>
+                                    <li><a href="../pages/cars_models/chevrolet_corvettec8.html">Chevrolet Corvette C8</a></li>
+                                    <li><a href="../pages/cars_models/ferrari488_pista.html">Ferrari 488 Pista</a></li>
+                                    <li><a href="../pages/cars_models/mclaren720.html">McLaren 720</a></li>
+                                    <li><a href="../pages/cars_models/lamborghini_hevo.html">Lamborghini Huracan Evo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="../pages/contactus.html" target="_blank">Contact Us</a></li>
+                    <li><a href="../pages/buyonline.html" target="_blank">Buy Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>MAKE YOUR PURCHASE</h2>
+            <div class="form-container">
+        <form class="formulario-buy-online">
+            <div class="row">
+                <div class="column">
+                    <input type="text" placeholder="Enter your name:" required>
+                    <input type="text" placeholder="Enter your last name:" required>
+                    <input type="text" placeholder="Enter your id number:" required>
+                    <select name="country" id="country" required>
+                        <option>Select your country</option>
+                        <option value="">Select your country...</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="ES">Spain</option>
+                        <option value="IT">Italy</option>
+                        <option value="MX">Mexico</option>
+                        <option value="BR">Brazil</option>
+                        <option value="AR">Argentina</option>
+                        <option value="IN">India</option>
+                        <option value="CN">China</option>
+                        <option value="JP">Japan</option>
+                        <option value="KR">South Korea</option>
+                        <option value="ZA">South Africa</option>
+                    </select>
+                    <input type="text" placeholder="Street:" required>
+                    <input type="text" placeholder="Floor or apartament (optional):">
+                    <label class="work_or_home">Is it at your home or your work?</label>
+                    <div class="radio-group">
+                        <label class="home_text"><img class="home" src="../img/work - home/House Logo.png" alt=""><input type="radio" name="location" value="home" required>  Home</label>
+                        <label class="home_text"> <img class="work" src="../img/work - home/Work Logo.png" alt="Work"> <input type="radio" name="location" value="work">  Work</label>
+                    </div>
+                    <input type="tel" placeholder="Enter your phone number:" required>
+                    <input type="email" placeholder="Enter your email:" required>
+                    <textarea placeholder="Write any additional relevant information:"></textarea>
+                </div>
+                <div class="column">
+                    <label for="car-model">Selecciona un modelo de auto:</label>
+                    <select id="car-model" name="car-model">
+                        <option value="default">Selecciona un auto</option>
+                        <option value="chevrolet-spark">Chevrolet Spark</option>
+                        <option value="hyundai-accent">Hyundai Accent</option>
+                        <option value="nissan-versa">Nissan Versa</option>
+                        <option value="toyota-yaris">Toyota Yaris</option>
+                        <option value="honda-civic">Honda Civic</option>
+                        <option value="toyota-corolla">Toyota Corolla</option>
+                        <option value="mazda-3">Mazda 3</option>
+                        <option value="hyundai-elantra">Hyundai Elantra</option>
+                        <option value="volkswagen-jetta">Volkswagen Jetta</option>
+                        <option value="mercedes-benz-clase-s">Mercedes-Benz Clase S</option>
+                        <option value="bmw-serie-7">BMW Serie 7</option>
+                        <option value="audi-a8">Audi A8</option>
+                        <option value="porsche-panamera">Porsche Panamera</option>
+                        <option value="tesla-model-s">Tesla Model S</option>
+                        <option value="kia-rio">Kia Rio</option>
+                        <option value="P911">Porsche 911</option>
+                        <option value="CHC8">Chevrolet Corvette C8</option>
+                        <option value="F488P">Ferrari 488 Pista</option>
+                        <option value="MCL720">McLaren 720</option>
+                        <option value="LHE">Lamborghini Huracán Evo</option>
+                    </select>
+                    <div class="image-placeholder" id="image-placeholder">
+                        <p>SelectedModel</p>
+                    </div>
+                    <input type="text" placeholder="Number..." required>
+                    <div class="medios_de_pago">
+                        <!-- Íconos de métodos de pago -->
+                        <label><img class="visa" src="../img/Métodos de pago/Visa.png" alt="Visa"><input type="radio" name="payment" value="Visa"></label>
+                        <label><img class="mastercard" src="../img/Métodos de pago/Master Card.png" alt="MasterCard"><input type="radio" name="payment" value="MasterCard"></label>
+                        <label><img class="paypal" src="../img/Métodos de pago/PayPal.png" alt="PayPal"><input type="radio" name="payment" value="PayPal"></label>
+                        <label><img class="naranja" src="../img/Métodos de pago/Naranja.png" alt="Naranja"><input type="radio" name="payment" value="Naranja"></label>
+                        <label><img class="mercadopago" src="../img/Métodos de pago/Mercado Pago.png" alt="MercadoPago"><input type="radio" name="payment" value="MarcadoPago"></label>
+                        <label><img class="googlepay" src="../img/Métodos de pago/Google Pay.png" alt="Google Pay"><input type="radio" name="payment" value="Google Pay"></label>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="buy-btn">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </main>
+    
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../img/Logotipo/CarsWorldWideLogotype.ico" alt="Cars World Wide Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/models.html" target="_blank">Models</a></li>
+                    <li><a href="./pages/buyonline.html" target="_blank">Buy Online</a></li>
+                    <li><a href="./pages/contactus.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../img/social medial/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../img/social medial/instagram (1).png" alt="Instagram"></a>
+                    <a href="#"><img src="../img/social medial/x.extwitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="../img/social medial/youtubsito.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cars World Wide. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</html>
