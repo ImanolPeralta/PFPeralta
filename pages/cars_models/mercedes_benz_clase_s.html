@@ -4,70 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="shortcut icon" href="../img/Logotipo/CarsWorldWideLogotype.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/Logotipo/CarsWorldWideLogotype.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Mercedes Benz Clase S</title>
+    <title>Cars World Wide - Mercedes Benz Clase S</title>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="../../img/Logotipo/CarsWorldWideLogotype.ico" alt="Cars World Wide Logo">
-                <h1>Cars World Wide</h1>
+        <!-- Navbar menú con submenús -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../../img/Logotipo/CarsWorldWideLogotype.ico" alt="Logo">
+                    Cars World Wide
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle models-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Models
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- Low Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Low Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="chevrolet_spark.html" target="_blank">Chevrolet Spark</a></li>
+                                        <li><a class="dropdown-item" href="hyundai_accemt.html" target="_blank">Hyundai Accent</a></li>
+                                        <li><a class="dropdown-item" href="kia_rio.html" target="_blank">Kia Rio</a></li>
+                                        <li><a class="dropdown-item" href="nissan_versa.html" target="_blank">Nissan Versa</a></li>
+                                        <li><a class="dropdown-item" href="toyota_yaris.html" target="_blank">Toyota Yaris</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Mid Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Mid Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="honda_civic.html" target="_blank">Honda Civic</a></li>
+                                        <li><a class="dropdown-item" href="hyundai_elantra.html" target="_blank">Hyundai Elantra</a></li>
+                                        <li><a class="dropdown-item" href="mazda3.html" target="_blank">Mazda 3</a></li>
+                                        <li><a class="dropdown-item" href="toyota_corolla.html" target="_blank">Toyota Corolla</a></li>
+                                        <li><a class="dropdown-item" href="volskwagen_jetta.html" target="_blank">Volkswagen Jetta</a></li>
+                                    </ul>
+                                </li>
+                                <!-- High End -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">High End</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="mercedes_benz_clase_s.html" target="_blank">Mercedes Benz Clase S</a></li>
+                                        <li><a class="dropdown-item" href="bmw_serie_7.html" target="_blank">BMW Serie 7</a></li>
+                                        <li><a class="dropdown-item" href="audi_a8.html" target="_blank">Audi A8</a></li>
+                                        <li><a class="dropdown-item" href="porsche_panamera.html" target="_blank">Porsche Panamera</a></li>
+                                        <li><a class="dropdown-item" href="tesla_model_s.html" target="_blank">Tesla Model S</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Sport Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Sport Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="porsche911.html" target="_blank">Porsche 911</a></li>
+                                        <li><a class="dropdown-item" href="chevrolet_corvettec8.html" target="_blank">Chevrolet Corvette C8</a></li>
+                                        <li><a class="dropdown-item" href="ferrari488_pista.html" target="_blank">Ferrari 488 Pista</a></li>
+                                        <li><a class="dropdown-item" href="mclaren720.html" target="_blank">McLaren 720</a></li>
+                                        <li><a class="dropdown-item" href="lamborghini_hevo.html" target="_blank">Lamborghini Huracán Evo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../buyonline.html" target="_blank">Buy Online</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="hamburger-menu" id="hamburger"></div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <ul class="main-menu">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="./models.html">Models</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Low Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="./chevrolet_spark.html">Chevrolet Spark</a></li>
-                                    <li><a href="./kia_rio.html">Kia Rio</a></li>
-                                    <li><a href="./hyundai_accemt.html">Hyundai Accent</a></li>
-                                    <li><a href="./nissan_versa.html">Nissan Versa</a></li>
-                                    <li><a href="./toyota_yaris.html">Toyota Yaris</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Mid Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="./honda_civic.html">Honda Civic</a></li>
-                                    <li><a href="./toyota_corolla.html">Toyota Corolla</a></li>
-                                    <li><a href="./mazda3.html">Mazda 3</a></li>
-                                    <li><a href="./hyundai_elantra.html">Hyundai Elantra</a></li>
-                                    <li><a href="./volskwagen_jetta.html">Volkswagen Jetta</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">High End</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="./mercedes_benz_clase_s.html">Mercedes Benz Clase S</a></li>
-                                    <li><a href="./bmw_serie_7.html">BMW Serie 7</a></li>
-                                    <li><a href="./audi_a8.html">Audi A8</a></li>
-                                    <li><a href="./porsche_panamera.html">Porsche Panamera</a></li>
-                                    <li><a href="./tesla_model_s.html">Tesla Model S</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Sport Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="./porsche911.html">Porsche 911</a></li>
-                                    <li><a href="./chevrolet_corvettec8.html">Chevrolet Corvette C8</a></li>
-                                    <li><a href="./ferrari488_pista.html">Ferrari 488 Pista</a></li>
-                                    <li><a href="./mclaren720.html">McLaren 720</a></li>
-                                    <li><a href="./lamborghini_hevo.html">Lamborghini Huracan Evo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="./contactus.html">Contact Us</a></li>
-                    <li><a href="./buyonline.html">Buy Online</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
     <main>
         <div id="carouselExampleCaptions" class="carousel slide">
@@ -108,9 +125,82 @@
             <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div><h2>Mercedes Benz Clase S</h2></div>
+<div class="contenedor">
+    <div class="row">
+        <div class="col"><img src="../../img/High End/Mercedes Benz Clase S/mz1.jpg" alt=""></div>
+        <div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur, quia dicta officiis consequatur cumque maxime quasi vel error deserunt explicabo at ad, ex saepe porro quisquam quibusdam perferendis dolor libero non rerum natus. Voluptas laudantium quod provident perferendis optio, veniam aliquid! Magni corporis aspernatur suscipit sed quam. Dolor reiciendis non quidem consequatur suscipit, cum ab vero quas ullam commodi culpa necessitatibus modi! Nisi eius veniam magnam architecto doloribus esse, quaerat obcaecati in adipisci cumque iste sapiente illo expedita amet dolorum culpa atque beatae vel! Vero omnis delectus consectetur ratione ducimus amet laboriosam, iusto eum consequatur modi? Quisquam, eum impedit?</p></div>
+    </div>
+    <div class="row">
+        <div class="col"><img class="img2" src="../../img/High End/Mercedes Benz Clase S/mz2.jpg" alt=""></div>
+        <div class="col"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur, quia dicta officiis consequatur cumque maxime quasi vel error deserunt explicabo at ad, ex saepe porro quisquam quibusdam perferendis dolor libero non rerum natus. Voluptas laudantium quod provident perferendis optio, veniam aliquid! Magni corporis aspernatur suscipit sed quam. Dolor reiciendis non quidem consequatur suscipit, cum ab vero quas ullam commodi culpa necessitatibus modi! Nisi eius veniam magnam architecto doloribus esse, quaerat obcaecati in adipisci cumque iste sapiente illo expedita amet dolorum culpa atque beatae vel! Vero omnis delectus consectetur ratione ducimus amet laboriosam, iusto eum consequatur modi? Quisquam, eum impedit?</p></div>
+    </div>
+</div>
+<div class="iframe"><iframe width="90%" height="695" src="https://www.youtube.com/embed/GkoSo97cJn4" title="The New Mercedes-Maybach S-Class: World Premiere | Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="contenedor mt-5">
+    <h2 class="text-center mb-4">Mercedes-Benz Clase S Specifications</h2>
+    <div class="container d-flex justify-content-center align-items-center center-table">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>Specification</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Brand</td>
+                <td>Mercedes-Benz</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+                <td>Clase S</td>
+              </tr>
+              <tr>
+                <td>Engine</td>
+                <td>4.0L V8 Twin-Turbo</td>
+              </tr>
+              <tr>
+                <td>Power</td>
+                <td>496 hp</td>
+              </tr>
+              <tr>
+                <td>Acceleration (0-100 km/h)</td>
+                <td>4.4 seconds</td>
+              </tr>
+              <tr>
+                <td>Top Speed</td>
+                <td>250 km/h (limited)</td>
+              </tr>
+              <tr>
+                <td>Drive Type</td>
+                <td>All-wheel drive (AWD)</td>
+              </tr>
+              <tr>
+                <td>Weight</td>
+                <td>1,850 kg</td>
+              </tr>
+              <tr>
+                <td>Price</td>
+                <td>$110,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
     </main>
-    
+        <!-- Links para Javascript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Link para Javascript local-->
+    <script src="../../javascript/script.js"></script>
+    <!--JavaScript de AOS Animate-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--Inicializando AOS Animate-->
+    <script>
+        AOS.init();
+    </script>
 </body>
 <footer>
     <div class="footer-container">
@@ -121,7 +211,7 @@
             <div class="footer-links">
                 <ul>
                     <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../models.html" target="_blank">Models</a></li>
+                    <li><a href="./pages/models.html" target="_blank">Models</a></li>
                     <li><a href="../buyonline.html" target="_blank">Buy Online</a></li>
                     <li><a href="../contactus.html" target="_blank">Contact Us</a></li>
                 </ul>

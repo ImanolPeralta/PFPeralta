@@ -1,0 +1,226 @@
+.form-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #1C1C1C;
+  padding: 20px;
+  border: 1px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-buy-online {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  width: 48% !important; /*Se aplica para que no sea deformado por Bootstrap*/
+}
+
+input[type=text], input[type=tel], input[type=email], select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: "Kanit";
+}
+
+.work_or_home {
+  color: white;
+  font-family: "Kanit";
+}
+
+textarea {
+  height: 100px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.image-placeholder img {
+  max-width: 100%;
+}
+
+.medios_de_pago {
+  display: inline;
+}
+
+.visa {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.mastercard {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.paypal {
+  width: 45px;
+  margin: 5px;
+}
+
+.naranja {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.mercadopago {
+  width: 65px;
+  margin-right: 5px;
+}
+
+.googlepay {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.home {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.home_text {
+  color: white;
+  font-family: "Kanit";
+}
+
+.work {
+  width: 16px;
+  margin-right: 1px;
+}
+
+.radio-group {
+  margin-bottom: 15px;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.cancel-btn, .buy-btn {
+  width: 150px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #0e0e0e;
+  color: #fff;
+  font-family: "Kanit";
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background-color: black;
+}
+
+.cancel-btn:active {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.buy-btn {
+  background-color: #C0C0C0;
+  color: black;
+  font-family: "Kanit";
+  font-weight: bold;
+}
+
+.buy-btn:hover {
+  background-color: #7d7d7d;
+  color: white;
+}
+
+.buy-btn:active {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .formulario-buy-online {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .column, .row {
+    display: inline;
+    justify-content: space-around;
+    width: 100% !important;
+  }
+  input[type=text], input[type=tel], input[type=email], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buy-btn, .cancel-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .visa, .mastercard, .paypal, .naranja, .mercadopago, .googlepay {
+    width: 30px;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .buy-btn, .cancel-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .medios_de_pago img {
+    width: 30px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .form-container {
+    margin: 0 auto;
+    padding: 15px;
+  }
+  input, textarea {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+
+/*# sourceMappingURL=buy_online.css.map */

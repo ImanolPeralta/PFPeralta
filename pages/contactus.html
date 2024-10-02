@@ -3,74 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilo CSS-->
     <link rel="stylesheet" href="../css/style.css">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--CDN de Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--CDN de AOS Animate-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../img/Logotipo/CarsWorldWideLogotype.ico" type="image/x-icon">
-    <title>Contact Us</title>
+    <title>Cars World Wide - Contact Us</title>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="../img/Logotipo/CarsWorldWideLogotype.ico" alt="Cars World Wide Logo">
-                <h1>Cars World Wide</h1>
+        <!-- Navbar menú con submenús -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/Logotipo/CarsWorldWideLogotype.ico" alt="Logo">
+                    Cars World Wide
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle models-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Models
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!-- Low Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Low Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../pages/cars_models/chevrolet_spark.html" target="_blank">Chevrolet Spark</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/hyundai_accemt.html" target="_blank">Hyundai Accent</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/kia_rio.html" target="_blank">Kia Rio</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/nissan_versa.html" target="_blank">Nissan Versa</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/toyota_yaris.html" target="_blank">Toyota Yaris</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Mid Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Mid Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../pages/cars_models/honda_civic.html" target="_blank">Honda Civic</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/hyundai_elantra.html" target="_blank">Hyundai Elantra</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/mazda3.html" target="_blank">Mazda 3</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/toyota_corolla.html" target="_blank">Toyota Corolla</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/volskwagen_jetta.html" target="_blank">Volkswagen Jetta</a></li>
+                                    </ul>
+                                </li>
+                                <!-- High End -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">High End</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../pages/cars_models/mercedes_benz_clase_s.html" target="_blank">Mercedes Benz Clase S</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/bmw_serie_7.html" target="_blank">BMW Serie 7</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/audi_a8.html" target="_blank">Audi A8</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/porsche_panamera.html" target="_blank">Porsche Panamera</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/tesla_model_s.html" target="_blank">Tesla Model S</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Sport Range -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Sport Range</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../pages/cars_models/porsche911.html" target="_blank">Porsche 911</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/chevrolet_corvettec8.html" target="_blank">Chevrolet Corvette C8</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/ferrari488_pista.html" target="_blank">Ferrari 488 Pista</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/mclaren720.html" target="_blank">McLaren 720</a></li>
+                                        <li><a class="dropdown-item" href="../pages/cars_models/lamborghini_hevo.html" target="_blank">Lamborghini Huracán Evo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./buyonline.html" target="_blank">Buy Online</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="hamburger-menu" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <ul class="main-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Models</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Low Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="../pages/cars_models/chevrolet_spark.html">Chevrolet Spark</a></li>
-                                    <li><a href="../pages/cars_models/kia_rio.html">Kia Rio</a></li>
-                                    <li><a href="../pages/cars_models/hyundai_accemt.html">Hyundai Accent</a></li>
-                                    <li><a href="../pages/cars_models/nissan_versa.html">Nissan Versa</a></li>
-                                    <li><a href="../pages/cars_models/toyota_yaris.html">Toyota Yaris</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Mid Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="../pages/cars_models/honda_civic.html">Honda Civic</a></li>
-                                    <li><a href="../pages/cars_models/toyota_corolla.html">Toyota Corolla</a></li>
-                                    <li><a href="../pages/cars_models/mazda3.html">Mazda 3</a></li>
-                                    <li><a href="../pages/cars_models/hyundai_elantra.html">Hyundai Elantra</a></li>
-                                    <li><a href="../pages/cars_models/volskwagen_jetta.html">Volkswagen Jetta</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">High End</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="../pages/cars_models/mercedes_benz_clase_s.html">Mercedes Benz Clase S</a></li>
-                                    <li><a href="../pages/cars_models/bmw_serie_7.html">BMW Serie 7</a></li>
-                                    <li><a href="../pages/cars_models/audi_a8.html">Audi A8</a></li>
-                                    <li><a href="../pages/cars_models/porsche_panamera.html">Porsche Panamera</a></li>
-                                    <li><a href="../pages/cars_models/tesla_model_s.html">Tesla Model S</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Sport Range</a>
-                                <ul class="dropdown-submenu">
-                                    <li><a href="../pages/cars_models/porsche911.html">Porsche 911</a></li>
-                                    <li><a href="../pages/cars_models/chevrolet_corvettec8.html">Chevrolet Corvette C8</a></li>
-                                    <li><a href="../pages/cars_models/ferrari488_pista.html">Ferrari 488 Pista</a></li>
-                                    <li><a href="../pages/cars_models/mclaren720.html">McLaren 720</a></li>
-                                    <li><a href="../pages/cars_models/lamborghini_hevo.html">Lamborghini Huracan Evo</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="../pages/contactus.html" target="_blank">Contact Us</a></li>
-                    <li><a href="../pages/buyonline.html" target="_blank">Buy Online</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
     <main>
-        <h2>CONTACT FORM</h2>
+        <div data-aos="zoom-out"><h2>CONTACT FORM</h2></div>
         <div class="container">
             <div class="contact-info">
                 <p> <img src="../img/social medial/mail.png" alt="">  consultas@carsworldwide.com</p>
@@ -104,7 +127,16 @@
             </div>
         </div>
     </main>
-
+        <!-- Links para Javascript Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Link para Javascript local-->
+        <script src="../javascript/script.js"></script>
+        <!--JavaScript de AOS Animate-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!--Inicializando AOS Animate-->
+        <script>
+            AOS.init();
+        </script>
 </body>
 <footer>
     <div class="footer-container">
@@ -115,7 +147,7 @@
             <div class="footer-links">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="./pages/models.html" target="_blank">Models</a></li>
+                    <li><a href="../index.html" target="_blank">Models</a></li>
                     <li><a href="./pages/buyonline.html" target="_blank">Buy Online</a></li>
                     <li><a href="./pages/contactus.html" target="_blank">Contact Us</a></li>
                 </ul>
@@ -123,10 +155,10 @@
             <div class="footer-social">
                 <h3>Follow Us</h3>
                 <div class="social-icons">
-                    <a href="#"><img src="../img/social medial/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="../img/social medial/instagram (1).png" alt="Instagram"></a>
-                    <a href="#"><img src="../img/social medial/x.extwitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="../img/social medial/youtubsito.png" alt="YouTube"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../img/social medial/facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com/" target="_blank"><img src="../img/social medial/instagram (1).png" alt="Instagram"></a>
+                    <a href="https://x.com/i/flow/login" target="_blank"><img src="../img/social medial/x.extwitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="../img/social medial/youtubsito.png" alt="YouTube"></a>
                 </div>
             </div>
         </div>

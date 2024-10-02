@@ -1,0 +1,82 @@
+main h2 {
+  font-family: "Kanit";
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+main .container {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1C1C1C;
+  padding: 20px;
+  max-width: 1000px;
+  border: 1px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+main .contact-info, main .contact-form {
+  width: 30vw;
+}
+main .contact-form h2 {
+  font-size: 2rem;
+}
+main .contact-info p {
+  font-family: "Kanit";
+  position: relative;
+  transform: translateY(200%);
+  padding-top: 10px;
+  font-size: 16px;
+  color: white;
+}
+main .contact-info p img {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  justify-content: center;
+}
+main .map {
+  margin-top: 10px 0;
+  width: 90%;
+  height: 60%;
+  padding: 10px;
+  transform: translateY(30%);
+}
+main .contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: white;
+}
+main .contact-form input[type=text],
+main .contact-form textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  background-color: white;
+  color: #000000;
+}
+main .contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e0e0e;
+  border: white 1px solid;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Kanit";
+  font-weight: bold;
+}
+main .contact-form button:hover {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+main .contact-form button:active {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=contact_us.css.map */

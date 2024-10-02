@@ -1,0 +1,151 @@
+.col img {
+  margin-left: 10px;
+  width: 90%;
+  height: 90%;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.col .img2 {
+  width: 90%;
+  height: 90%;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.col p {
+  padding: 20px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  background-color: #1C1C1C;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Khand";
+  text-align: start;
+}
+
+.col {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-responsive {
+  width: 90%;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Khand";
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .grilla1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "img_autos" "p_autos" "img_edificios" "p_edificios";
+  }
+  .img_autos, .img_edificios {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .p_autos, .p_edificios {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-info p {
+    padding: 0 auto;
+    margin: 0 auto;
+    transform: translateY(0);
+  }
+  .contact-info img {
+    width: 1px;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form button {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+    height: 200px;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .slider, .grilla, .grilla1, .footer-container, .main, .container {
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
+  }
+  .col img {
+    width: 95vw;
+    height: 100%;
+  }
+  .col .img2 {
+    width: 100%;
+    height: 100%;
+  }
+  .col p {
+    width: 95vw;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px;
+    text-align: justify;
+    align-items: center;
+  }
+  .table-responsive {
+    width: 100%;
+    font-size: 1rem;
+    overflow-x: auto;
+  }
+  .buy-btn, .cancel-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=cars_models.css.map */
