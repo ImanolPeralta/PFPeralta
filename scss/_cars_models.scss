@@ -7,6 +7,10 @@
     border: 2px solid white;
     object-fit: cover;
 }
+.col img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 30px #afaeaeb3;
+}
 .col .img2 {
     width: 90%;
     height: 90%;
@@ -50,29 +54,6 @@
     font-size: 1.2rem;
 }
 //Adaptabilidad para dispositivos móviles
-@media (max-width: 768px) {
-    .grilla1 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "img_autos"
-        "p_autos"
-        "img_edificios"
-        "p_edificios";
-    }
-
-    .img_autos, .img_edificios {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .p_autos, .p_edificios {
-        font-size: 1rem;
-        padding: 10px;
-    }
-}
 @media (max-width: 768px) {
     body {
         font-size: 14px;

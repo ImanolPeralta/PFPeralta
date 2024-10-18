@@ -29,3 +29,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//Acordeón automático
+let currentIndex = 0;
+const slides = document.querySelectorAll('.car-slide');
+
+function showNextSlide() {
+    slides[currentIndex].classList.remove('active'); // Ocultar la imagen actual
+    currentIndex = (currentIndex + 1) % slides.length; // Avanzar al siguiente índice
+    slides[currentIndex].classList.add('active'); // Mostrar la siguiente imagen
+}
+
+// Inicia mostrando la primera imagen
+slides[currentIndex].classList.add('active');
+
+// Cambia la imagen cada 5 segundos (5000 ms)
+setInterval(showNextSlide, 5000);

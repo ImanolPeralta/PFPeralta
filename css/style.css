@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Kanit";
   src: url(../fonts/Kanit/Kanit-Light.ttf);
@@ -18,6 +19,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  /* Media query para dispositivos móviles (max-width: 768px) */
 }
 body ::-webkit-scrollbar {
   width: 12px;
@@ -72,7 +74,6 @@ body header .logo h1 {
 body header .navbar {
   background-color: #1d1d1d;
   padding: 1rem;
-  width: 100vw;
 }
 body header .navbar-brand img {
   max-height: 80px;
@@ -138,88 +139,116 @@ body header .dropdown-submenu .dropdown-menu {
 body header .navbar-nav .dropdown-toggle::after {
   content: none;
 }
-body .grilla {
+body .car-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  gap: 7px 7px;
-  grid-auto-flow: row;
-  margin: 0 auto;
-  padding: 0;
-  grid-template-areas: "imagen1 imagen2 imagen3 imagen4" "parrafo1 parrafo2 parrafo3 parrafo4";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0;
 }
-body .imagen1 {
-  grid-area: imagen1;
-  width: 470px;
-  height: 470px;
-  object-fit: cover;
-  animation: wave 5s infinite ease-in-out;
+body .car-item {
+  position: relative;
+  overflow: hidden;
+}
+body .car-item img {
+  width: 100%;
+  height: auto;
   display: block;
-  margin: 0 auto;
+  transition: transform 0.3s ease, filter 0.5s ease;
+  filter: brightness(90%);
 }
-body .imagen2 {
-  grid-area: imagen2;
-  width: 470px;
-  height: 470px;
-  object-fit: cover;
-  animation: wave 5s infinite ease-in-out;
-  display: block;
-  margin: 0 auto;
+body .car-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(110%) saturate(120%);
 }
-body .imagen3 {
-  grid-area: imagen3;
-  width: 470px;
-  height: 470px;
-  object-fit: cover;
-  animation: wave 5s infinite ease-in-out;
-  display: block;
-  margin: 0 auto;
-}
-body .imagen4 {
-  grid-area: imagen4;
-  width: 470px;
-  height: 470px;
-  object-fit: cover;
-  animation: wave 5s infinite ease-in-out;
-  display: block;
-  margin: 0 auto;
-}
-body .parrafo1 {
-  grid-area: parrafo1;
-  font-size: 1.5rem;
-  font-family: "Khand";
+body .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  border: 1px solid white;
-  object-fit: cover;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+  transform: translateY(20px);
 }
-body .parrafo2 {
-  grid-area: parrafo2;
-  font-size: 1.5rem;
-  font-family: "Khand";
-  color: white;
-  border: 1px solid white;
-  object-fit: cover;
-  margin: 0 auto;
+body .car-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
-body .parrafo3 {
-  grid-area: parrafo3;
-  font-size: 1.5rem;
-  font-family: "Khand";
-  color: white;
-  border: 1px solid white;
-  object-fit: cover;
-  margin: 0 auto;
+body .overlay h3 {
+  font-family: "Kanit";
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
 }
-body .parrafo4 {
-  grid-area: parrafo4;
-  font-size: 1.5rem;
+body .car-item:hover .overlay h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+body .overlay p {
   font-family: "Khand";
-  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+body .car-item:hover .overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+body .btn {
+  font-family: "Kanit";
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #444444;
   border: 1px solid white;
-  object-fit: cover;
-  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(255, 99, 71, 0);
+}
+body .btn:hover {
+  background-color: #444444;
+  border: 1px solid white;
+  box-shadow: 0 0 20px rgba(86, 75, 73, 0.6);
+}
+body .car-item {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+body .car-item:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  body .car-gallery {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  body .overlay h3 {
+    font-size: 20px;
+  }
+  body .overlay p {
+    font-size: 14px;
+  }
+  body .btn {
+    font-size: 12px;
+  }
 }
 body .grilla1 {
   display: grid;
@@ -307,29 +336,52 @@ body .p_edificios {
     grid-template-rows: auto;
     grid-template-areas: "imagen1" "parrafo1" "imagen2" "parrafo2" "imagen3" "parrafo3" "imagen4" "parrafo4";
   }
-  body .imagen1, body .imagen2, body .imagen3, body .imagen4 {
+}
+@media (max-width: 768px) {
+  body .grilla1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img_autos" "p_autos" "img_edificios" "p_edificios";
+  }
+  body .img_autos, body .img_edificios {
     width: 100%;
     height: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
-  body .parrafo1, body .parrafo2, body .parrafo3, body .parrafo4 {
-    font-size: 1rem;
-    text-align: justify;
+  body .p_autos, body .p_edificios {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
   }
 }
-body footer {
+body .imagen1, body .imagen2, body .imagen3, body .imagen4 {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  margin: auto;
+}
+body .parrafo1, body .parrafo2, body .parrafo3, body .parrafo4 {
+  font-size: 1.5rem;
+  padding: 3px;
+  margin: 3px;
+  text-align: justify;
+}
+
+footer {
   background: linear-gradient(180deg, #1C1C1C, #C0C0C0);
   color: white;
   padding: 40px 20px;
   font-family: "Kanit";
 }
-body footer .footer-container {
+footer .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body footer .footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -338,75 +390,83 @@ body footer .footer-content {
   margin-bottom: 30px;
   text-align: center;
 }
-body footer .footer-logo img {
+footer .footer-logo img {
   width: 150px;
   height: auto;
   border: 3px solid rgba(255, 255, 255, 0.477);
   border-radius: 100%;
 }
-body footer .footer-links ul {
+footer .footer-links ul {
   list-style-type: none;
   padding: 52px;
   display: flex;
   gap: 20px;
   flex-direction: row;
 }
-body footer .footer-links ul li {
+footer .footer-links ul li {
   margin: 10px 0;
   align-content: space-between;
 }
-body footer .footer-links ul li a {
+footer .footer-links ul li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
-body footer .footer-links ul li a:hover {
+footer .footer-links ul li a:hover {
   color: #1C1C1C;
   font-weight: bold;
 }
-body footer .footer-social h3 {
+footer .footer-social h3 {
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
-body footer .social-icons a img {
+footer .social-icons a img {
   width: 40px;
   margin: 0 10px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
-body footer .social-icons a img:hover {
+footer .social-icons a img:hover {
   transform: scale(1.2);
   filter: brightness(1.2);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.221);
   border-radius: 100%;
 }
-body footer .footer-bottom {
+footer .footer-bottom {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
 }
-body footer .footer-bottom p {
+footer .footer-bottom p {
   margin: 0;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 768px) {
-  body footer .footer-container {
+  footer header img {
+    margin-top: 10px;
+  }
+  footer .main-content {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-container {
     display: inline;
     align-items: center;
     text-align: center;
   }
-  body footer .footer-content {
+  footer .footer-content {
     flex-direction: column;
     gap: 20px;
   }
-  body footer .footer-links ul {
+  footer .footer-links ul {
     flex-direction: row;
     align-items: center;
     text-align: center;
   }
-  body footer .footer-social {
+  footer .footer-social {
     text-align: center;
   }
 }
@@ -566,16 +626,11 @@ textarea {
 
 .image-placeholder {
   width: 100%;
-  height: 150px;
-  background-color: #eee;
+  background-color: #1C1C1C;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-}
-
-.image-placeholder img {
-  max-width: 100%;
 }
 
 .medios_de_pago {
@@ -750,6 +805,30 @@ textarea {
     font-size: 1rem;
   }
 }
+.animation-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Ajusta según tus necesidades */
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.car-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.car-slide.active {
+  opacity: 1;
+}
+
 .col img {
   margin-left: 10px;
   width: 90%;
@@ -757,6 +836,11 @@ textarea {
   transition: all 0.3s ease-in-out;
   border: 2px solid white;
   object-fit: cover;
+}
+
+.col img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 30px rgba(175, 174, 174, 0.7019607843);
 }
 
 .col .img2 {
@@ -806,23 +890,6 @@ textarea {
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-  .grilla1 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "img_autos" "p_autos" "img_edificios" "p_edificios";
-  }
-  .img_autos, .img_edificios {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .p_autos, .p_edificios {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
 @media (max-width: 768px) {
   body {
     font-size: 14px;
